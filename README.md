@@ -32,15 +32,11 @@ The task consist of:
 
 ### Screenshots
 
-![](./docs/main-empty.jpg)
-
-![](./docs/main-add.jpg)
-
-![](./docs/main-with.jpg)
-
-![](./docs/task-screen.jpg)
-
-![](./docs/task-edit.jpg)
+<img src="./docs/main-empty.jpg" width="50%">
+<img src="./docs/main-add.jpg" width="50%">
+<img src="./docs/main-with.jpg" width="50%">
+<img src="./docs/task-screen.jpg" width="50%">
+<img src="./docs/task-edit.jpg" width="50%">
 
 ## Built with
 
