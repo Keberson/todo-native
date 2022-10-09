@@ -3,7 +3,7 @@ import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import HomeScreen from "./screens/HomeScreen";
 import TaskScreen from "./screens/TaskScreen";
-import ITaskModel from "./models/taskModel";
+import ITaskModel from "./src/models/taskModel";
 
 export type RootStackParams = {
   Home: undefined

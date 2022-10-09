@@ -9,9 +9,9 @@ import {NavigationProp, useNavigation} from "@react-navigation/native";
 import {Card, FAB} from "@rneui/themed"
 import {CheckBox} from "@rneui/base";
 import ITaskModel from "../models/taskModel";
-import {RootStackParams} from "../App";
+import {RootStackParams} from "../../App";
 import PriorityLevel from "./PriorityLevel";
-import data from "../classes/ToDo";
+import data from "../store/ToDoStore";
 
 type TaskProps = {
   task: ITaskModel;

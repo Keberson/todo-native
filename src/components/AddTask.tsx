@@ -2,14 +2,12 @@ import React, {useState} from 'react';
 import {
   View
 } from 'react-native';
+import {makeAutoObservable, observable} from "mobx";
 import {
   Divider,
-  Text,
-  Input,
-  ButtonGroup,
   Dialog,
 } from "@rneui/themed";
-import data from '../classes/ToDo'
+import data from '../store/ToDoStore'
 import TaskEdit from "./TaskEdit";
 import ITaskModel from "../models/taskModel";
 
@@ -18,14 +16,29 @@ type Props = {
   toggle: () => void;
 }
 
+const nullTask: ITaskModel = {
+  id: "",
+  name: '',
+  description: '',
+  priority: 0,
+  isDone: false
+};
+
 const AddTask = ({ visibility, toggle }: Props) => {
-  const [task, setTask] = useState<ITaskModel>({
-    id: 0,
-    name: '',
-    description: '',
-    priority: 0,
-    isDone: false
-  });
+  const [task, setTask] = useState<ITaskModel>(nullTask);
+
+  const onPressHandler = () => {
+    data.createTask({
+      id: data.getNewID(),
+      name: task.name,
+      description: task.description,
+      priority: task.priority,
+      isDone: false
+    });
+
+    setTask(nullTask);
+    toggle();
+  };
 
   return (
     <Dialog
@@ -40,23 +53,7 @@ const AddTask = ({ visibility, toggle }: Props) => {
       <Dialog.Actions>
         <Dialog.Button
           title="Confirm"
-          onPress={() => {
-            data.createTask({
-              id: data.getNewID(),
-              name: task.name,
-              description: task.description,
-              priority: task.priority,
-              isDone: false
-            });
-            setTask({
-              id: 0,
-              name: '',
-              description: '',
-              priority: 0,
-              isDone: false
-            });
-            toggle();
-          }}
+          onPress={onPressHandler}
         />
         <Dialog.Button title="Cancel" onPress={toggle} />
       </Dialog.Actions>

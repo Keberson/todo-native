@@ -8,10 +8,10 @@ import {
 } from "@rneui/themed";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import {RootStackParams} from "../App";
-import TaskDetails from "../components/TaskDetails";
-import TaskEdit from "../components/TaskEdit";
-import data from '../classes/ToDo'
-import ITaskModel from "../models/taskModel";
+import TaskDetails from "../src/components/TaskDetails";
+import TaskEdit from "../src/components/TaskEdit";
+import data from '../src/store/ToDoStore'
+import ITaskModel from "../src/models/taskModel";
 
 type Props = NativeStackScreenProps<RootStackParams, 'Task'>;
 

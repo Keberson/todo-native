@@ -3,8 +3,8 @@ import {
   FAB,
   SearchBar
 } from "@rneui/themed";
-import AddTask from "../components/AddTask";
-import ToDoList from "../components/ToDoList";
+import AddTask from "../src/components/AddTask";
+import ToDoList from "../src/components/ToDoList";
 import {View} from "react-native";
 
 const HomeScreen: React.FC = () => {

@@ -1,5 +1,5 @@
 export default interface ITaskModel {
-  id: number;
+  id: string | number[];
   name: string;
   description: string;
   priority: number;
