@@ -2,8 +2,7 @@ import React from 'react';
 import {
   ButtonGroup,
   Input,
-  Text,
-  CheckBox
+  Text
 } from "@rneui/themed";
 import {
   StyleSheet,

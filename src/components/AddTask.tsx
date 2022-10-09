@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {
   View
 } from 'react-native';
-import {makeAutoObservable, observable} from "mobx";
 import {
   Divider,
   Dialog,
