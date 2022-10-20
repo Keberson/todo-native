@@ -27,13 +27,7 @@ const AddTask = ({ visibility, toggle }: Props) => {
   const [task, setTask] = useState<ITaskModel>(nullTask);
 
   const onPressHandler = () => {
-    data.createTask({
-      id: data.getNewID(),
-      name: task.name,
-      description: task.description,
-      priority: task.priority,
-      isDone: false
-    });
+    data.createTask(task);
 
     setTask(nullTask);
     toggle();

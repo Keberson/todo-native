@@ -24,7 +24,7 @@ const ToDoList: React.FC<ToDoProps> = observer(({ filter }) => {
         filteredData.length > 0
           ? <FlatList
             data={filteredData}
-            renderItem={({ item, index, separators }) =>
+            renderItem={({ item }) =>
               <TaskCard
                 key={Number(item.id)}
                 task={item}
@@ -40,7 +40,7 @@ const ToDoList: React.FC<ToDoProps> = observer(({ filter }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 60
+    marginBottom: 100
   },
   empty: {
     marginTop: 50,

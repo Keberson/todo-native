@@ -9,7 +9,7 @@ class ToDoStore {
   constructor() {
     const keys = storage.getAllKeys();
 
-    for (const key in keys) {
+    for (const key of keys) {
       let task = storage.getString(key);
 
       if (task !== undefined) {
@@ -21,8 +21,14 @@ class ToDoStore {
   }
 
   createTask(task: ITaskModel) {
-    this.todos.push(task);
-    storage.set(task.id, JSON.stringify(task));
+    const newTask = {
+      ...task,
+      id: this.getNewID(),
+      isDone: false
+    };
+
+    this.todos.push(newTask);
+    storage.set(newTask.id, JSON.stringify(newTask));
   }
 
   deleteTask(id: string) {

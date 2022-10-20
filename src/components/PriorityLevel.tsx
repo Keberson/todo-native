@@ -13,7 +13,7 @@ const PriorityLevel: React.FC<LevelProps> = ({ repeat }) => {
   return (
     <View style={styles.container}>
       {
-        Array.from({ length: 3 }, (_, i) => <Icon key={i} name="star" type="evilicon"/>)
+        Array.from({ length: repeat }, (_, i) => <Icon key={i} name="star" type="evilicon"/>)
       }
     </View>
   )
