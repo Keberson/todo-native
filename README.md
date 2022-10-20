@@ -30,6 +30,8 @@ The task consist of:
 - priority
 - is done
 
+ToDo App must use offline storage.
+
 ### Screenshots
 
 <img src="./docs/main-empty.jpg" width="50%">

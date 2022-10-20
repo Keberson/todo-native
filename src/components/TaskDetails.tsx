@@ -3,7 +3,7 @@ import {
   CheckBox,
   Text
 } from "@rneui/themed";
-import PriorityLevel from "../components/PriorityLevel";
+import PriorityLevel from "./PriorityLevel";
 import ITaskModel from "../models/taskModel";
 import {StyleSheet} from "react-native";
 
